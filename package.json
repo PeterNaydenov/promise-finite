@@ -4,14 +4,12 @@
   "description": "Promise with ttl",
   "main": "index.js",
   "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "bluebird": "^3.5.0",
-    "chai": "^4.1.0"
+    "test": "mocha test"
   },
   "devDependencies": {
-    "mocha": "^3.4.2"
+    "bluebird": "3.7.2",
+    "chai": "4.3.4",
+    "mocha": "8.3.2"
   },
   "scripts": {
     "test": "mocha test"
