@@ -62,6 +62,10 @@ _(Nothing yet)_
 
 ## Release History
 
+
+### 1.0.1 (2021-04-01)
+- [x] Just a dev. dependencies update
+
 ### 1.0.0 (2017-07-15)
 
 - [x] Node.js module;
