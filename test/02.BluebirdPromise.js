@@ -1,9 +1,10 @@
 'use strict';
 
-const chai = require ('chai');
-const expect = require ('chai').expect;
-const bluebird = require ( 'bluebird' );
-const promiseFinite = require ('../index').customize(bluebird);
+import { expect } from 'chai'
+import bluebird from 'bluebird'
+import { customize as pfCustomize } from '../index.js'
+
+const promiseFinite = pfCustomize(bluebird);
 
 
 

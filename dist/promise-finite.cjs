@@ -1,0 +1,1 @@
+"use strict";function e(e,t,n="expire",r){let i,o;const s=new e(((e,t)=>(o=e,r(e,t)))).catch((()=>clearTimeout(i))),c=new e((e=>{i=setTimeout((()=>{e(n),o(null)}),t)}));return s.then((()=>clearTimeout(i))),e.race([s,c])}const t=e.bind(null,Promise);exports.customize=(t=Promise)=>e.bind(null,t),exports.standard=t;

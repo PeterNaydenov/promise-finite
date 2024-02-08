@@ -1,32 +1,50 @@
 {
   "name": "promise-finite",
-  "version": "1.0.1",
   "description": "Promise with ttl",
-  "main": "index.js",
+  "version": "1.0.1",
+  "license": "MIT",
+  "author": "Peter Naydenov",
+  "main": "./dist/promise-finite.umd.js",
+  "type": "module",
+  "exports": {
+                ".": {
+                  "import": "./dist/promise-finite.esm.mjs",
+                  "require": "./dist/promise-finite.cjs",
+                  "default": "./dist/promise-finite.umd.js"
+                },
+                "./package.json": "./package.json",
+                "./dist/*": "./dist/*",
+                "./src/*": "./src/*",
+                "./README.md" : "./README.md"
+        },
+  "scripts": {
+        "test": "mocha test",
+        "build": "rollup -c"
+      },
+  "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PeterNaydenov/promise-finite.git"
+      },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "bluebird": "3.7.2",
+    "chai": "5.0.3",
+    "mocha": "10.2.0",
+    "rollup": "^4.9.6"
+  },
   "directories": {
     "test": "mocha test"
   },
-  "devDependencies": {
-    "bluebird": "3.7.2",
-    "chai": "4.3.10",
-    "mocha": "10.2.0"
-  },
-  "scripts": {
-    "test": "mocha test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PeterNaydenov/promise-finite.git"
-  },
+  
   "keywords": [
-    "promise",
-    "timeout",
-    "ttl"
-  ],
-  "author": "Peter Naydenov",
-  "license": "MIT",
+              "promise",
+              "timeout",
+              "ttl"
+        ],
   "bugs": {
-    "url": "https://github.com/PeterNaydenov/promise-finite/issues"
-  },
+        "url": "https://github.com/PeterNaydenov/promise-finite/issues"
+      },
   "homepage": "https://github.com/PeterNaydenov/promise-finite#readme"
 }

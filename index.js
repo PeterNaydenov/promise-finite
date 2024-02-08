@@ -1,31 +1,33 @@
 function promiseFiniteBase ( PromiseLib, ttl, expireMsg='expire', promiseFn ) {
-    let timer;
+    let timer, close;
 
-    const mainPromise = new PromiseLib ( promiseFn );
-    const timeout     = new PromiseLib ( (resolve, reject) => {
-                                                        timer = setTimeout ( () => {
-                                                                                      resolve ( expireMsg )
-                                                                                      PromiseLib.resolve ( mainPromise)
-                                                                    }, ttl );
+    const mainPromise = new PromiseLib ( (resolve,reject) => {
+                                              close = resolve
+                                              return promiseFn(resolve,reject)
+                                      })
+                                  .catch ( () => clearTimeout(timer)   )
+    const timeout = new PromiseLib ( resolve => {
+                                          timer = setTimeout ( () => {
+                                                                        resolve ( expireMsg )
+                                                                        close ( null )
+                                                      }, ttl );
                                }) // timeout
 
-    mainPromise.then ( () => clearTimeout(timer)   )
+    mainPromise.then ( () => clearTimeout(timer))
     return PromiseLib.race ([mainPromise,timeout])
 } // promiseFiniteBase func.
 
+
+
 const 
-      default_Promise_Library = promiseFiniteBase.bind (null, Promise)
-    , load_Custom_Promises = (PromiseLib = Promise) => promiseFiniteBase.bind (null, PromiseLib)
+      default_Promise_Library = promiseFiniteBase.bind (null, Promise )
+    , load_Custom_Promises = (PromiseLib = Promise) => promiseFiniteBase.bind (null, PromiseLib )
     ;
 
 
 
 // * Official API
-const API = {
-      default   : default_Promise_Library // promiseFinite function with native Promise build in.
-    , customize : load_Custom_Promises    // returns promiseFinite function with provided Promise library.
-  }
-
-module.exports = API
+export { default_Promise_Library as standard  }   // promiseFinite function with native Promise build in.
+export { load_Custom_Promises    as customize }   // returns promiseFinite function with provided Promise library.
 
 

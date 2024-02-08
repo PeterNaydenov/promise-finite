@@ -1,0 +1,1 @@
+function e(e,n,t="expire",i){let o,r;const c=new e(((e,n)=>(r=e,i(e,n)))).catch((()=>clearTimeout(o))),l=new e((e=>{o=setTimeout((()=>{e(t),r(null)}),n)}));return c.then((()=>clearTimeout(o))),e.race([c,l])}const n=e.bind(null,Promise),t=(n=Promise)=>e.bind(null,n);export{t as customize,n as standard};

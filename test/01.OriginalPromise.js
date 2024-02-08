@@ -1,8 +1,8 @@
 'use strict';
 
-const chai = require ('chai');
-const expect = require ('chai').expect;
-const promiseFinite = require ('../index').default;
+import { expect } from 'chai'
+import { standard as promiseFinite } from '../index.js'
+
 
 
 describe ( 'Original Promise Library', () => {
