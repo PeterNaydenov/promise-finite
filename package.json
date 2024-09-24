@@ -26,13 +26,13 @@
     "url": "git+https://github.com/PeterNaydenov/promise-finite.git"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-terser": "^0.4.4",
     "bluebird": "3.7.2",
     "chai": "5.1.1",
-    "mocha": "10.4.0",
-    "rollup": "^4.12.0"
+    "mocha": "10.7.3",
+    "rollup": "^4.22.4"
   },
   "directories": {
     "test": "mocha test"
