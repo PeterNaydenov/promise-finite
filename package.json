@@ -26,7 +26,7 @@
     "url": "git+https://github.com/PeterNaydenov/promise-finite.git"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "bluebird": "3.7.2",
