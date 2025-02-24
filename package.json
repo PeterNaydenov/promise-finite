@@ -31,7 +31,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "bluebird": "3.7.2",
     "chai": "5.2.0",
-    "mocha": "11.0.1",
+    "mocha": "11.1.0",
     "rollup": "^4.34.8"
   },
   "directories": {
