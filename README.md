@@ -80,6 +80,13 @@ _(Nothing yet)_
 
 
 
+### 2.0.1 ( 2026-07-28 )
+- [x] Dev. dependencies update;
+- [x] Moving from mocha to vitest test runner;
+- [x] Coverage report was added;
+
+
+
 ### 2.0.0 ( 2024-02-08 )
 - [x] Convert module to es6
 - [x] Folder 'dist' was added to the project. Includes commonjs, umd and esm versions of the library;
