@@ -1,7 +1,7 @@
 {
   "name": "promise-finite",
   "description": "Promise with ttl",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "author": "Peter Naydenov",
   "main": "./dist/promise-finite.umd.js",
