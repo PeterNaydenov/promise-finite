@@ -36,10 +36,6 @@
     "rollup": "^4.60.4",
     "vitest": "^4.1.10"
   },
-  "overrides": {
-    "diff": "^8.0.4",
-    "serialize-javascript": "^7.0.5"
-  },
   "directories": {
     "test": "vitest test"
   },
