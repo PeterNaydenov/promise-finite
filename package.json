@@ -18,7 +18,9 @@
     "./README.md": "./README.md"
   },
   "scripts": {
-    "test": "mocha test",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "cover": "vitest run --coverage",
     "build": "rollup -c"
   },
   "repository": {
@@ -29,17 +31,17 @@
     "@rollup/plugin-commonjs": "^29.0.2",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
+    "@vitest/coverage-v8": "^4.1.10",
     "bluebird": "3.7.2",
-    "chai": "6.2.2",
-    "mocha": "11.7.5",
-    "rollup": "^4.60.4"
+    "rollup": "^4.60.4",
+    "vitest": "^4.1.10"
   },
   "overrides": {
-    "diff" : "^8.0.4",
-    "serialize-javascript" : "^7.0.5"
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.5"
   },
   "directories": {
-    "test": "mocha test"
+    "test": "vitest test"
   },
   "keywords": [
     "promise",
@@ -49,5 +51,8 @@
   "bugs": {
     "url": "https://github.com/PeterNaydenov/promise-finite/issues"
   },
-  "homepage": "https://github.com/PeterNaydenov/promise-finite#readme"
+  "homepage": "https://github.com/PeterNaydenov/promise-finite#readme",
+  "allowScripts": {
+    "fsevents@2.3.3": true
+  }
 }
