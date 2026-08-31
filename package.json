@@ -33,7 +33,7 @@
     "@rollup/plugin-terser": "^1.0.0",
     "@vitest/coverage-v8": "^4.1.11",
     "bluebird": "3.7.2",
-    "rollup": "^4.63.0",
+    "rollup": "^4.63.1",
     "vitest": "^4.1.11"
   },
   "directories": {
