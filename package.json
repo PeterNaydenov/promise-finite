@@ -31,10 +31,10 @@
     "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
-    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/coverage-v8": "^4.1.11",
     "bluebird": "3.7.2",
     "rollup": "^4.62.3",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.11"
   },
   "directories": {
     "test": "vitest test"
